@@ -127,6 +127,15 @@ const options = {
           description: 'Dados obrigatórios ausentes ou inválidos',
           content: { 'application/json': { schema: { $ref: '#/components/schemas/Erro' } } }
         },
+        ErroInterno: {
+          description: 'Erro interno no servidor (ex.: falha ao ler o arquivo de dados)',
+          content: {
+            'application/json': {
+              schema: { $ref: '#/components/schemas/Erro' },
+              example: { erro: 'Ocorreu um erro interno no servidor.' }
+            }
+          }
+        },
         NaoEncontrado: {
           description: 'Recurso não localizado',
           content: { 'application/json': { schema: { $ref: '#/components/schemas/Erro' } } }

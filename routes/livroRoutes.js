@@ -21,6 +21,7 @@ const router = Router();
  *             schema:
  *               type: array
  *               items: { $ref: '#/components/schemas/Livro' }
+ *       500: { $ref: '#/components/responses/ErroInterno' }
  */
 router.get('/', (req, res, next) => controller.index(req, res, next));
 
